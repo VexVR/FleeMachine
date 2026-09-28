@@ -1,13 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>facility</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>facility</title>
+  
+  <style>
+    /* 1. Container configuration to hide page scrollbars */
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      background: transparent;
+    }
+
+    /* 2. Style your target image and attach the scroll animation */
+    .scrolling-hammer {
+      width: 900px; /* Forces your larger size preference */
+      height: auto;
+      display: inline-block;
+      animation: scroll-left 15s linear infinite; /* Loops every 15 seconds */
+    }
+
+    /* 3. The path layout instructions from off-screen right to off-screen left */
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(100vw); /* Starts outside the right frame */
+      }
+      100% {
+        transform: translateX(-100%); /* Loops after leaving the left frame */
+      }
+    }
+  </style>
 </head>
 <body>
-	<p>HAVE YOU EVER WANTED A MACHINE THAT LETS YOU FLEE ANY FACILITY YOU WANT? WELL NOW YOU CAN WITH THE FLEE MACHINE</p>
+
+  <p>HAVE YOU EVER WANTED A MACHINE THAT LETS YOU FLEE ANY FACILITY YOU WANT? WELL NOW YOU CAN WITH THE FLEE MACHINE</p>
+
+  <!-- The moving element wrapped inside its boundary box -->
+  <div class="marquee-container">
+    <img src="images.jpg" alt="Flee the Facility Hammer" class="scrolling-hammer">
+  </div>
+
+  <p>ORDER THE FLEE MACHINE TODAY FOR GIVE OR TAKE £90 (MS Kotecha not included)</p>
+
 </body>
 </html>
-<img src="images.jpg" alt="Flee the Facility Hammer" style="width: 100%; max-width: 800px; height: auto;">
-	<p>ORDER THE FLEE MACHINE TODAY FOR GIVE OR TAKE £90 (MS Kotecha not included)</p>
