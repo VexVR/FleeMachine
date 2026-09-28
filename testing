@@ -47,3 +47,25 @@
 
 </body>
 </html>
+
+
+
+
+ <div class="reviews-content">
+    <h1>Mandem's Monographs</h1>
+    
+    <div class="review-card">
+      <p><strong>"10/10 Highly Recommend"</strong></p>
+      <p>Fled the facility in record time. The hammer design is flawless. I sent EVERYONE using runner. Absolutely worth the £90!</p>
+      <p><em>- Anonymous Beast</em></p>
+    </div>
+
+    <div class="review-card">
+      <p><strong>"Great product but why no Kotecha?"</strong></p>
+      <p>The flee machine works exactly as advertised, but I am disappointed that Ms Kotecha wasn't included in the box.</p>
+      <p><em>- ZyaFox</em></p>
+    </div>
+  </div>
+
+</body>
+</html>
