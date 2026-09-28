@@ -51,20 +51,43 @@
   </div>
 
   <div class="reviews-content">
-    <h1>Mandem's Monographs</h1>
-    
+  <h1>Mandem's Monographs</h1>
+
+  <!-- 1. Wrap your normal reviews in a container div with an id -->
+  <div id="regular-reviews-container">
     <div class="review-card">
-      <p><strong>"10/10 Highly Recommend"</strong></p>
+      <p><strong>10/10 Highly Recommend</strong></p>
       <p>Fled the facility in record time. The hammer design is flawless. I sent EVERYONE using runner. Absolutely worth the £90!</p>
       <p><em>- Anonymous Beast</em></p>
     </div>
 
     <div class="review-card">
-      <p><strong>"Great product but why no Kotecha?"</strong></p>
+      <p><strong>Great product but why no Kotecha?</strong></p>
       <p>The flee machine works exactly as advertised, but I am disappointed that Ms Kotecha wasn't included in the box.</p>
       <p><em>- ZyaFox</em></p>
     </div>
   </div>
+
+  <!-- 2. Add your rare review container right here, hidden by default -->
+  <div id="rare-review-container" style="display: none;">
+    <div class="review-card" style="border: 2px dashed #ff4d4d; background: #fff0f0;">
+      <p><strong>🚨 EXTRA RARE REVIEW (10% Spawn Chance) 🚨</strong></p>
+      <p>The beast caught me immediately. 0/10, but the hammer looks cool.</p>
+      <p><em>- Survivor99</em></p>
+    </div>
+  </div>
+
+</div>
+
+<!-- 3. Add the JavaScript snippet right before your closing body tag -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (Math.random() < 0.10) { 
+      document.getElementById("regular-reviews-container").style.display = "none";
+      document.getElementById("rare-review-container").style.display = "block";
+    }
+  });
+</script>
 
 </body>
 </html>
