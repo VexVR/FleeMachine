@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flee Machine - Mandem's Monographs</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+
+    /* Navigation (identical to index.html) */
+    nav { display: flex; background: #333; padding: 10px; margin-bottom: 20px; }
+    nav a { color: #fff; padding: 14px 20px; text-decoration: none; font-size: 17px; }
+    nav a:hover { background: #ddd; color: #000; }
+    nav a.active { background: #4CAF50; color: #fff; }
+
+    /* Reviews */
+    main { padding: 20px; }
+    .review-card {
+      background: #f4f4f4;
+      border-left: 5px solid #4CAF50;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+    .review-card.rare { border: 2px dashed #ff4d4d; background: #fff0f0; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a class="active" href="What%20the%20mandem%20are%20saying.html">Mandem's Monographs</a>
+  </nav>
+
+  <main>
+    <h1>Mandem's Monographs</h1>
+
+    <div id="regular-reviews">
+      <div class="review-card">
+        <p><strong>10/10 Highly Recommend</strong></p>
+        <p>Fled the facility in record time. The hammer design is flawless. I sent EVERYONE using runner. Absolutely worth the £90!</p>
+        <p><em>- Anonymous Beast</em></p>
+      </div>
+
+      <div class="review-card">
+        <p><strong>Great product but why no Kotecha?</strong></p>
+        <p>The flee machine works exactly as advertised, but I am disappointed that Ms Kotecha wasn't included in the box.</p>
+        <p><em>- ZyaFox</em></p>
+      </div>
+    </div>
+
+    <!-- Rare review: 10% chance it replaces the regular reviews -->
+    <div id="rare-review" hidden>
+      <div class="review-card rare">
+        <p><strong>HELP IVE FALLEN DOWN A WELL</strong></p>
+        <p>HELP IM IN A WELL DOWN BEAT STREET. THE BEAST SENT ME!!!</p>
+        <p><em>- Isa Matin</em></p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    if (Math.random() < 0.1) {
+      document.getElementById("regular-reviews").hidden = true;
+      document.getElementById("rare-review").hidden = false;
+    }
+  </script>
+
+</body>
+</html>
